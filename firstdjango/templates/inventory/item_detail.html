@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
+
 	<a href="{% url 'index' %}">Back to item list</a>
 	<h3>{{ item.title|capfirst }}</h3>
-	<p> {{ item.amount }} currently in stock</p>
-	<h4>Description:</h4>
+	<p> {{ item.quantity }} currently in stock</p>
+	<h4>Speciality:</h4>
 	<p> {{ item.description }}</p>
+	<h4>Price:</h4>
+	<p> {{ item.price }}</p>
+	<div class="crzy">
+  <img src={{item.picture}} alt="car-picture">
+	<img src="sport-cars.png" alt="pic">
+
+	</div>
 {% endblock %}
