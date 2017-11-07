@@ -1,11 +1,21 @@
 body{
   background:;
-  background-image:url('images/sport-cars.png');
+  background-image:url('sport-cars.png');
 }
 
-h1, h2, h3 {
+h1, {
     font-size: 2.5em;
     color: ;
+}
+
+h2 {
+    font-size: 2em;
+    color: red;
+}
+
+h3 {
+    font-size: 2em;
+    color: green;
 }
 
 a {

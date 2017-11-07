@@ -5,4 +5,4 @@ class Item(models.Model):
     description = models.TextField()
     quantity = models.IntegerField()
     price = models.IntegerField(null=True, blank=True)
-    picture = models.ImageField(null=True)
+    picture = models.ImageField(null=True, blank=True)

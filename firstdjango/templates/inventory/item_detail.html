@@ -4,16 +4,17 @@
 
 
 
-	<a href="{% url 'index' %}">Back to item list</a>
+	<a href="{% url 'index' %}"> &larr; All Cars</a>
 	<h3>{{ item.title|capfirst }}</h3>
 	<p> {{ item.quantity }} currently in stock</p>
 	<h4>Speciality:</h4>
 	<p> {{ item.description }}</p>
 	<h4>Price:</h4>
 	<p> {{ item.price }}</p>
-	<div class="crzy">
-  <img src={{item.picture}} alt="car-picture">
-	<img src="sport-cars.png" alt="pic">
+	<a href="{% url 'buy' %}">Buy</a>
+		<br>
+  <img src={{item.picture.url}} alt="car-picture" align = "right">
+	<br>
 
-	</div>
+
 {% endblock %}

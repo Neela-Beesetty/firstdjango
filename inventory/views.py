@@ -27,5 +27,10 @@ def contact(request):
     return render(request, 'inventory/contact.html', {
         'items': items,
         })
+def buy(request):
+    items = Item.objects.exclude(quantity=0)
+    return render(request, 'inventory/buy.html', {
+        'items': items,
+        })
 
 # Create your views here.
