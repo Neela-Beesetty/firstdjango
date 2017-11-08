@@ -18,15 +18,11 @@ def item_detail(request, id):
         })
 
 def about(request):
-    items = Item.objects.exclude(quantity=0)
-    return render(request, 'inventory/about.html', {
-        'items': items,
-        })
+    return render(request, 'inventory/about.html')
+
 def contact(request):
-    items = Item.objects.exclude(quantity=0)
-    return render(request, 'inventory/contact.html', {
-        'items': items,
-        })
+    return render(request, 'inventory/contact.html')
+
 def buy(request):
     items = Item.objects.exclude(quantity=0)
     return render(request, 'inventory/buy.html', {

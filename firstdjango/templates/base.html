@@ -5,28 +5,24 @@
         <meta charset="utf-8">
         <title>Dream-Cars</title>
         <meta name="description" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'main.css' %}">
+
     </head>
 
     <body>
 
+      {% include 'inventory/navbar-collapsable.html'%}
 
-      {% include 'inventory/_navbar.html'%}
-
-      <!-- Image -->
-      <!--<img src="{% static 'images/sport-cars.png' %}" alt="cars-image" >
--->
       <div class="container">
       {% block content %}
       {% endblock content %}
       </div>
 
-    <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
-  -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
 
-
-  <script src="{% static 'main.js' %}">  </script>
+      <script src="{% static 'main.js' %}">  </script>
       <body>
 
 </html>
