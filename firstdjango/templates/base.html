@@ -12,27 +12,29 @@
     </head>
 
     <body>
-
       {% include 'inventory/navbar-collapsable.html'%}
-
       <div class="container">
+
+      <header>
+        {% if user.is_authenticated %}
+    <h3>  Hello {{ user.username }}!</h3>
+      <a href="{% url 'logout' %}">logout</a>
+    {% else %}
+      <a href="{% url 'login' %}">login to buy!</a>
+{% endif %}
+      </header>
+
       {% block content %}
       {% endblock content %}
-      </div>
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
 
       <script src="{% static 'main.js' %}">  </script>
+
       <body>
+        <footer>
+        <h3>&copy;site created by <em>Neela Sekhar BEESETTY</em></h3>
+        </footer>
+    </div>
 
-</html>
-
-
-
-
-
-
-
-
-    </body>
 </html>
