@@ -3,7 +3,8 @@ body{
   background-image:url('sport-cars.png');
 }
 
-h1, {
+h1 {
+    font: times;
     font-size: 2.5em;
     color: ;
 }

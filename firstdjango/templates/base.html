@@ -17,8 +17,10 @@
 
       <header>
         {% if user.is_authenticated %}
-    <h3>  Hello {{ user.username }}!</h3>
-      <a href="{% url 'logout' %}">logout</a>
+    <h3>  Hello {{ user.username|capfirst }}!</h3>
+
+    </p> <a href="{% url 'logout' %}">logout</a>
+
     {% else %}
       <a href="{% url 'login' %}">login to buy!</a>
 {% endif %}
@@ -28,6 +30,7 @@
       {% endblock content %}
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+      <!--<link rel="stylesheet" href="{% static 'main.css' %}"> -->
 
       <script src="{% static 'main.js' %}">  </script>
 
